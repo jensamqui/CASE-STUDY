@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>-Brew Haven Coffee-</title>
+  <!--Favicon-->
+  <link rel="icon" href="/img/icon.ico" type="image/x-icon">
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu:ital@0;1&display=swap"
+    rel="stylesheet">
+  
+  <script src="https://kit.fontawesome.com/cc5e355fff.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a37586c1fd.js" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="cart.js" async></script>
+  <script src="top.js" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<script>
+  function randomQuote() {
+    let getQuote = () => {
+      fetch("https://api.quotable.io/quotes/random?maxLength=70").then(data => data.json()).then(item => {
+        document.getElementById('cta-heading').textContent += `"${item[0].content}" - ${item[0].author}`;
+        // console.log(item);
+
+      })
+    }
+    // console.log("helo");
+    getQuote();
+
+    // Display the quote content on the website.
+  }
+
+</script>
+
+<body onload="randomQuote()">
+  <button onclick="topFunction()" id="backToTop" title="Go to top">↑</button>
+  <section id="title">
+
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-sm navbar-dark ">
+
+        <a class="navbar-brand" href="#">
+          <img class="logo"
+            src="LOGO.png"
+            alt="Avatar">
+        </a>
+
+        <span class="navbar-brand" href="" style="color: white;" style="font-style: italic;">Brew Haven</span>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" id="col" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="col" href="#pricing">Order</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="col" href="#testimonials">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="col" href="login.html">Login</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </nav>
+
+      <!-- Title -->
+
+      <div class="row">
+
+        <div class="col-lg-6">
+
+          <h1 class="title">
+            <span class="title-word" id="title-word1">Good</span>
+            <span class="title-word" id="title-word2">Coffee</span>
+            <span class="title-word" id="title-word3">will</span>
+            <span class="title-word" id="title-word4">always</span>
+            <span class="title-word" id="title-word5">Find</span>
+            <span class="title-word" id="title-word6">the</span>
+            <span class="title-word" id="title-word7">good</span>
+            <span class="title-word" id="title-word8">audience</span>
+          </h1>
+
+        </div>
+
+
+        <div class="col-lg-6">
+          <img class="title-image" src="https://freepngimg.com/thumb/coffee/3-2-coffee-png-file.png"
+            alt="coffee-cup-icon">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  
+  <section id="features">
+
+    <div class="container text-center">
+
+      <div class="row">
+
+        <div class="col">
+          <div class="feature-card">
+            <i class="icon fas fa-check-circle fa-4x"></i>
+            <h3>Quality Assured</h3>
+            <p>Best quality coffee in the world.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="feature-card">
+            <i class="icon fas fa-smile-beam fa-4x"></i>
+            <h3>Made with a smile</h3>
+            <p>Delicious taste.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="feature-card">
+            <i class="icon fas fa-heart fa-4x"></i>
+            <h3>Best in Taste</h3>
+            <p>You would love it.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Testimonials -->
+
+  <section id="testimonials">
+
+    <h2 class=" text-center">Our Testimonials</h2>
+
+    <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active" data-interval="3000">
+          <img class="testimonial-image"
+            src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="cafe1"><br>
+          <em>LIVE THE EXPERIENCE</em>
+        </div>
+
+        <div class="carousel-item" data-interval="3000">
+          <img class="testimonial-image"
+            src="https://images.unsplash.com/photo-1442975631115-c4f7b05b8a2c?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="cafe2"><br>
+          <em>BEAUTIFUL VIEW</em>
+        </div>
+
+        <div class="carousel-item" data-interval="3000">
+          <img class="testimonial-image"
+            src="https://images.unsplash.com/photo-1707241358597-bafcc8a8e73d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="cafe3"><br>
+          <em>PROPER ACCOMMODATION</em>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-target="#testimonial-carousel" data-slide="prev">
+        <span class="coffee-cup-icon"></span>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-target="#testimonial-carousel" data-slide="next">
+        <span class="coffee-cup-icon"></span>
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- Pricing -->
+
+  <section id="pricing">
+
+    <h2>Menu</h2>
+    <p>SIMPLE AND AFFORDABLE PRICES.</p>
+
+    <div class="row">
+
+      <div class="pricing-column col-lg-4 col-md-6 col-sm-12">
+
+        <div class="card">
+          <div class="card-header">
+            <span class="shop-item-title">
+              <h3>COLD-BREWED</h3>
+            </span>
+          </div>
+
+          <div class="card-body">
+            <img class="card-image shop-item-image"
+              src="https://coffeeatthree.com/wp-content/uploads/0420-cold-brew-coffee-010.jpg" style="max-width: 100%;">
+          </div>
+
+          <div class="card-footer">
+            <span class="shop-item-price">
+              <h3 style="text-align: center;">₱160</h3>
+            </span>
+            <button class="btn btn-lg btn-block btn-outline-dark shop-item-button" type="button">Add to Cart</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6 col-sm-12">
+
+        <div class="card">
+          <div class="card-header">
+            <span class="shop-item-title">
+              <h3>AMERICANO</h3>
+            </span>
+          </div>
+
+          <div class="card-body">
+            <img class="card-image shop-item-image"
+              src="https://www.adityabirlacapital.com/healthinsurance/active-together/wp-content/uploads/2019/12/How-Are-Espressos-Good-For-Health_blog_lower_1.png"
+              style="max-width: 100%;">
+          </div>
+
+          <div class="card-footer">
+            <span class="shop-item-price">
+              <h3 style="text-align: center;">₱160</h3>
+            </span>
+            <button class="btn btn-lg btn-block btn-outline-dark shop-item-button" type="button">Add to Cart</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6 col-sm-12">
+
+        <div class="card">
+          <div class="card-header">
+            <span class="shop-item-title">
+              <h3>CAPPUCCINO</h3>
+            </span>
+          </div>
+
+          <div class="card-body">
+            <img class="card-image shop-item-image"
+              src="https://merriam-webster.com/assets/mw/images/article/art-wap-landing-mp-lg/cappuccino-2029-e80b7c6d318c7862df2c4c8623a11f99@1x.jpg"
+              style="max-width: 100%;">
+          </div>
+
+          <div class="card-footer">
+            <span class="shop-item-price">
+              <h3 style="text-align: center;">₱160</h3>
+            </span>
+            <button class="btn btn-lg btn-block btn-outline-dark shop-item-button" type="button">Add to Cart</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6 col-sm-12">
+
+        <div class="card">
+
+          <div class="card-header">
+            <span class="shop-item-title ">
+              <h3>MINT CHOCOLATE</h3>
+            </span>
+          </div>
+
+          <div class="card-body">
+            <img class="card-image shop-item-image"
+              src="https://www.vitamix.com/content/dam/vitamix/migration/media/other/images/p/Peppermint-Mocha-470x449.jpg"
+              style="max-width: 100%;">
+          </div>
+
+          <div class="card-footer">
+            <span class="shop-item-price">
+              <h3 style="text-align: center;">₱160</h3>
+            </span>
+            <button class="btn btn-lg btn-block btn-outline-dark shop-item-button" type="button">Add to Cart</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6 col-sm-12">
+
+        <div class="card">
+
+          <div class="card-header">
+            <span class="shop-item-title">
+              <h3>CAFFÈ LATTE</h3>
+            </span>
+          </div>
+
+          <div class="card-body">
+            <img class="card-image shop-item-image"
+              src="https://plantres.com.mx/wp-content/uploads/2020/03/CafeLatte.jpg"
+              style="max-width: 100%;">
+          </div>
+
+          <div class="card-footer">
+            <span class="shop-item-price">
+              <h3 style="text-align: center;">₱160</h3>
+            </span>
+            <button class="btn btn-lg btn-block btn-outline-dark shop-item-button" type="button">Add to Cart</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6 col-sm-12">
+
+        <div class="card">
+
+          <div class="card-header">
+            <span class="shop-item-title">
+              <h3>CAFFÈ MOCHA</h3>
+            </span>
+          </div>
+
+          <div class="card-body">
+            <img class="card-image shop-item-image"
+              src="https://www.everyday-delicious.com/wp-content/uploads/2021/05/caffe-mocha-kawa-mokka-everyday-delicious-2-1198x1800.jpg"
+              style="max-width: 100%;">
+          </div>
+
+          <div class="card-footer">
+            <span class="shop-item-price">
+              <h3 style="text-align: center;">₱160</h3>
+            </span>
+            <button class="btn btn-lg btn-block btn-outline-dark shop-item-button" type="button">Add to Cart</button>
+          </div>
+
+        </div>
+
+        <br><br>
+
+      </div>
+
+      <section class="container content-section">
+
+        <hr>
+        <h2 class="section-reader">CART</h2>
+        <hr> <!-- Added hr below cart -->
+
+        <div class="cart-row">
+          <span class="cart-item cart-header cart-column">ITEM</span>
+          <span class="cart-price cart-header cart-column">PRICE</span>
+          <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+
+        <div class="cart-items">
+
+          <div class="cart-row">
+
+            <div class="cart-item cart-column">
+              <img class="cart-item-image"
+                src="https://coffeeatthree.com/wp-content/uploads/0420-cold-brew-coffee-010.jpg" width="100px"
+                height="100px">
+              <span class="cart-item-title">COLD-BREWED</span>
+            </div>
+
+            <span class="cart-price cart-column">₱160</span>
+            <div class="cart-quantity cart-column">
+              <input class="cart-quantity-input" type="number" value="1">
+              <button class="btn btn-danger" type="button">REMOVE</button>
+            </div>
+
+          </div>
+
+          <div class="cart-row">
+
+            <div class="cart-item cart-column">
+              <img class="cart-item-image"
+                src="https://www.adityabirlacapital.com/healthinsurance/active-together/wp-content/uploads/2019/12/How-Are-Espressos-Good-For-Health_blog_lower_1.png"
+                width="100px" height="100px">
+              <span class="cart-item-title">AMERICANO</span>
+            </div>
+
+            <span class="cart-price cart-column">₱160</span>
+            <div class="cart-quantity cart-column">
+              <input class="cart-quantity-input" type="number" value="1">
+              <button class="btn btn-danger" type="button">REMOVE</button>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="cart-total">
+          <strong class="cart-total-title">Total</strong>
+        </div>
+        <div class="cart-total-main-price">
+          <span class="cart-total-price">₱</span>
+        </div>
+
+    </div>
+
+    <center>
+      <button onclick="window.location.href='payment.html'" class="payment btn btn-dark btn-lg download-button"
+        type="button">Payment</button>
+    </center>
+    <hr class="Payment-below"> <!-- added hr below payment button -->
+
+  </section>
+
+  <section id="cta">
+
+    <h3 class="cta-heading" id="cta-heading"></h3>
+
+  </section>
+
+  <section class="container content-section">
+
+    <hr>
+    <h2 class="section-header">REVIEWS</h2>
+    <p>At Brew Haven, we deeply appreciate the kind and thoughtful reviews from some of our cherished customers. Your feedback inspires us to continually improve and strive for excellence every day.</p>
+    <section id="press">
+      <div class="sponsor-card">
+        <div class="circle">
+          <img class="press-logo" src="https://scontent.fmnl33-5.fna.fbcdn.net/v/t39.30808-6/441920905_1117659912772945_602261069038591840_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=669761&_nc_eui2=AeHj5FEvSI-OciyZglzIX-5XOoCXXqJNt006gJdeok23TZXA4Se8wt_7e6GG2D0tkyUwvdzuew8A4J5HOohZdKhW&_nc_ohc=DFcwb-deXksQ7kNvgE1bPoT&_nc_ht=scontent.fmnl33-5.fna&_nc_gid=AWnhy7YzoqoI7yyemVvdDsS&oh=00_AYADaOhwODm6-WcRmjs3IX-e7RENB5gL4FFZNXJ5KjXaFQ&oe=670F0A11" alt="Starbucks">
+        </div>
+        <div class="overlay">
+          <p>Bengco Gerald: <br> Masarap naman sya at some point♡♡</p> <!-- Added br tag for better spacing -->
+        </div>
+      </div>
+
+      <div class="sponsor-card">
+        <div class="circle">
+          <img class="press-logo" src="https://scontent.fmnl37-2.fna.fbcdn.net/v/t39.30808-6/355828674_3412410245755657_3786507614415045568_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFaSdsf5c5lar3UZt4DwOeO3zLTtwFpvdjfMtO3AWm92HTGisE628ioG2Bvz065sVTBCViB2HnTjL297Ym5RxPg&_nc_ohc=49qJ0oBVlc4Q7kNvgFfMRtz&_nc_ht=scontent.fmnl37-2.fna&_nc_gid=AcF3Vv77lgvxz51RKdiw42y&oh=00_AYBd7c2saapgObpSzKoQCFIjZg_41JvXsUkhtIonCgYz4A&oe=670F000A" alt="Cafe Coffee Day">
+        </div>
+        <div class="overlay">
+          <p>Timothy Galope: Dahil sa kape nyo nakalimutan kona sya.</p>
+        </div>
+      </div>
+
+      <div class="sponsor-card">
+        <div class="circle">
+          <img class="press-logo" src="https://scontent.fmnl33-6.fna.fbcdn.net/v/t1.15752-9/462119765_1053447289323115_452316242958374899_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeHAVQRcF92F1hwBZM5pjsOeHjKmWoEK8yceMqZagQrzJ8rArr097p5PbAgFAtAnBDefmU7-RY_iABpNBXGF2b6E&_nc_ohc=K_RVJbhB4MIQ7kNvgEOyb40&_nc_ht=scontent.fmnl33-6.fna&_nc_gid=AN_pjz7JZu2z019k4_d8vfL&oh=03_Q7cD1QE9q11aF8d_Nbsr33u-v8VlQrns6_tYUfmPGr6-Qb5yDA&oe=67309398" alt="Costa Coffee">
+        </div>
+        <div class="overlay">
+          <p>Mikko Hipolito: Masarap! every sip feels like first love. </p>
+        </div>
+      </div>
+
+      <div class="sponsor-card">
+        <div class="circle">
+          <img class="press-logo" src="https://i.redd.it/c121xcz2uh9d1.jpeg" alt="Illy">
+        </div>
+        <div class="overlay">
+          <p>Kim Aien: masarap parang yakap ni crush. hehehe skirtts.</p>
+        </div>
+      </div>
+
+      <hr> <!-- Added hr for closing sponsor section -->
+
+    </section>
+
+    <section id="contact">
+
+      <div class="background">
+        <div class="container">
+          <div class="screen">
+
+            <div class="screen-header">
+              <div class="screen-header-left">
+                <div class="screen-header-button minimize align-ico" style="background: crimson;"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+              </div>
+
+              <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+              </div>
+
+            </div>
+
+            <div class="screen-body">
+              <div class="screen-body-item left">
+                <div class="app-title">
+                  <span>CONTACT</span>
+                  <span>US</span>
+                </div>
+
+                <img class="logo" style="margin-top: 50px;"
+                  src="LOGO.png"
+                  width="100" height="100" alt="Avatar">
+                <div class="app-contact"></div>
+              </div>
+
+              <div class="screen-body-item">
+                <div class="app-form">
+                  <div class="app-form-group">
+                    <input type="text" class="app-form-control" placeholder="CONTACT NO#: 0981 031 6162" value="">
+                  </div>
+                  <div class="app-form-group">
+                    <input type="email" class="app-form-control" placeholder="EMAIL: brewhaven1@gmail.com">
+                  </div>
+                  <div class="app-form-group">
+                    <input type="text" class="app-form-control" placeholder="LOCATED AT: San Jose Concepcion, Tarlac">
+                  </div>
+                  <div class="app-form-group-buttons">
+                   
+                    <button><a class="nav-link" id="col" href="#pricing">ORDER NOW</a></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer id="footer">
+
+    <div class="d-flex justify-content-between">
+
+      <div>
+        <a class="navbar-brand" href="#">
+          <img class="logo"
+            src="LOGO.png"
+            alt="Avatar">
+          Brew Haven
+        </a>
+      </div>
+
+      <div class="social-media-icons">
+        <a href="https://www.facebook.com/" target="blank"><i class="social-icon fab fa-facebook fa-2x"></i></a>
+        <a href="https://www.instagram.com/" target="blank"><i class="social-icon fab fa-instagram fa-2x"></i></a>
+        <a href="https://twitter.com/" target="blank"><i class="social-icon fab fa-x-twitter fa-2x"></i></a>
+        <a href="#"><i class=""></i></a>
+      </div>
+
+    </div>
+     <center><p><a class="link-page" href="login.html" style="color:darkblue;">LOGOUT ACCOUNT</a></p></center>
+
+    <div class="copyright text-center">©2024 Brew Haven | All Rights Reserved</div>
+
+  </footer>
+
+  <!--    Bootstrap js files-->
+  <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  </head>
+  
+</body>
+
+</html>
